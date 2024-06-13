@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Webpage Information -->
+        <title>Loading Spinner &bull; Tutorials</title>
+
+        <!-- Links: Styling & Icon -->
+        <link rel="icon" href="../img/icon.svg">
+        <link rel="stylesheet" href="../styles/css/main.css"><!-- Make sure this LINK is above all other stylesheet LINKS -->
+        <link rel="stylesheet" href="../styles/css/popup.css"><!-- Make sure this LINK is under the main.css LINK -->
+        <link rel="stylesheet" href="../styles/css/search-box.css"><!-- Make sure this LINK is under the main.css LINK -->
+        <link rel="stylesheet" href="../web-tools/css/movables.css"><!-- Make sure this LINK is under the main.css LINK -->
+        <link rel="stylesheet" href="../styles/css/tutorialpages.css"><!-- Make sure this LINK is under the main.css LINK -->
+
+        <!-- Meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Claasgreeneye">
+        <meta name="description" content="A portfolio website with the purpose of showcasing my knowledge in website development and beyond!">
+
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script defer src="../scripts/js/popup.jquery.js"></script>
+        <script defer src="../web-tools/js/movables.jquery.js"></script>
+        <script defer src="../scripts/js/accordion.jquery.js"></script>
+        <script defer src="../scripts/js/tutorial-image-zoom.js"></script>
+        <script src="../scripts/js/main.search.jquery.js"></script>
+        <script src="../scripts/js/disclaimer.jquery.js"></script>
+    </head>
+    <body>
+        <!-- In-Website Search -->
+        <div class="search-box closed">
+            <div class="container" id="sb-container">
+                <div class="searcher">
+                    <input type="search" id="searchInput" placeholder="Search by keyword..." data-locale="../data/json/search.json">
+                    <button id="searchActionButton"><img src="../img/icon/000/search.svg" alt="Search"></button>
+                    <button id="searchCloseButton"><img src="../img/icon/000/close.svg" alt="Close"></button>
+                </div>
+                <div class="search-results" id="searchResultsContainer"></div>
+                <div class="search-error">Could not find any results using such keyword(s)</div>
+                <div class="search-empty">Start searching by entering a keyword...</div>
+            </div>
+        </div>
+
+        <!-- Pop Up Boxes -->
+        <!-- Social Media (MySocials) -->
+        <div class="popup closed" id="mySocials">
+            <div class="container">
+                <div class="head">
+                    <span class="title">My Socials & Connections</span>
+                    <button class="popupCloseButton tp-box"><img src="../img/icon/000/close.svg" alt="close button"><span class="tooltip">Close</span></button>
+                </div>
+                <div class="body">
+                    <div class="socials-container">
+                        <a href="https://discord.gg/u9UhQG5ggW" target="_blank"><img alt="discord" src="../img/icon/icons8/icons8-discord-96.png"><span>Discord (Invite Link)</span></a>
+                        <a href="https://github.com/MuckyDriver" target="_blank"><img alt="github" src="../img/icon/icons8/icons8-github-96.png"><span>Github</span></a>
+                        <a href="https://twitter.com/Claasgreeneye" target="_blank"><img alt="x" src="../img/icon/icons8/icons8-twitter-96.png"><span>X/Twitter</span></a>
+                        <a href="https://www.youtube.com/@claasgreeneye" target="_blank"><img alt="youtube" src="../img/icon/icons8/icons8-youtube-96.png"><span>Youtube</span></a>
+                        <a href="mailto:claasgreeneye@protonmail.com"><img alt="protonmail" src="../img/icon/icons8/icons8-protonmail-96.png"><span>ProtonMail</span></a>
+                    </div>
+                    <div class="credit-icons8">
+                        Social icons by <a href="https://icons8.com">Icons8</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expansions and Services (Expansions Popup) -->
+        <div class="popup closed" id="myServices">
+            <div class="container">
+                <div class="head">
+                    <span class="title">Services</span>
+                    <button class="popupCloseButton tp-box"><img src="../img/icon/000/close.svg" alt="close button"><span class="tooltip">Close</span></button>
+                </div>
+                <div class="body faded">
+                    <p><i>Expansions and services are still to be developed, come back another time.</i></p>
+                    <p>
+                        What would the expansions and services be? Expansions will be different websites which are directly linked to my brand and myself.
+                        This will eventually include a whole range of websites including subdomains for people to visit and use in the future.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Index Page welcome banner (using main) -->
+        <main>
+            <div class="top">
+                <div class="logo">
+                    <img src="../img/icon.svg" alt="logo icon svg">
+                    <span>DHC<br>WEBLOG<sup>&copy;</sup></span>
+                </div>
+
+                <div class="services">
+                    <div class="tp-box">
+                        <button data-find-id="myServices" class="popupOpenButton"><img src="../img/icon/fff/apps_waffleicon.svg" alt="services" width="30"></button>
+                        <div class="tooltip right">Expansions / Services</div>
+                    </div>
+                    <div class="tp-box">
+                        <button id="searchOpenButton"><img src="../img/icon/fff/search.svg" alt="services" width="30"></button>
+                        <div class="tooltip">Search</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header section will include quick navigation which will stick to the top of the page after index page welcome banner. -->
+            <header>
+                <nav>
+                    <div>
+                        <a class="button-type-0 tp-box" href="../tutorial.html">
+                            <img src="../img/icon/9fafc1/edu_tutorial.svg" alt="index">
+                            <span>Return to main tutorial page</span>
+                            <div class="tooltip left">Go Back</div>
+                        </a>
+                    </div>
+                </nav>
+            </header>
+        </main>
+
+        <!-- Main content of page is below -->
+        <section>
+            <div class="wrapper">
+                <div class="tutorial-features">
+                    <div class="tutorial-info">
+                        <h4>Custom Loading Spinner</h4>
+                        <span class="greyify">A quick tutorial on how to make a custom loading spinner for your websites.</span>
+                    </div>
+                    <a class="download-button disabled" href="#" download="null">
+                        <span>Download Resources &bull; </span><b>0.0KB</b>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accordion Details: Tutorial Content and information -->
+        <section style="margin-bottom: 2em;">
+            <div class="wrapper">
+                <div class="accordion-container">
+
+                    <!-- First Section -->
+                    <div class="accordion-element">
+                        <div class="accordion-toggle open" style="background-image: url(../img/svg/Hexagon1.svg)" tabindex="0"><span>Topic Introduction</span></div>
+                        <div class="accordion-content" style="display: block;">
+                            <p>
+                                In this tutorial I am going to show you how to make a simple html and css loading spinner. This tutorial will require basic knowledge in
+                                HTML5 and CSS3. There are no additional resources needed for this creation, just follow the code snippets in order and you should be good to go.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Second -->
+                    <div class="accordion-element">
+                        <div class="accordion-toggle" style="background-image: url(../img/svg/ContourLine1.svg)" tabindex="0"><span>HTML Elements & Styling</span></div>
+                        <div class="accordion-content">
+                            <!-- What's happening in this section -->
+                            <p>
+                                In this section you will be adding the HTML element to your HTML document and styling that element into a spin loader.
+                            </p>
+
+                            <div class="tut-grid">
+                                <img alt="img1" src="code_snippets/01_codesnippet_html_1.png">
+                                <div>
+                                    <h5>Creating the DIV</h5>
+                                    <p>
+                                        The type of element would be a <code>&lt;div&gt;</code> which basically is a container. In this case we are going to turn
+                                        this into our simple animated loading spinner. Create the element using HTML and by adding the class "spin-loader".
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="tut-grid">
+                                <div>
+                                    <h5>Time for the styling</h5>
+                                    <p>
+                                        Now it's time to style the <code>&lt;div&gt;</code> to look like a spin loader. In a the CSS file add the code snippet contents.
+                                        The main part which will make it look like a spin loader would be the styling of the border. In this example one side from the rest 
+                                        will be different, i.e royalblue colour. Changing the "border-radius" at a value of 50% will make it a full circle as long as its 
+                                        width and height are exactly the same.
+                                    </p>
+                                </div>
+                                <img alt="img2" src="code_snippets/01_codesnippet_css_1.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Last Section -->
+                    <div class="accordion-element">
+                        <div class="accordion-toggle" style="background-image: url(../img/svg/CircuitBoard1.svg)" tabindex="0"><span>Animation</span></div>
+                        <div class="accordion-content">
+                            <!-- What's happening in this section -->
+                            <p>
+                                Lastly, it's time to add the animation part of the spin loader. In this instance it will be put on a infinite loop.
+                            </p>
+
+                            <!-- Section: Adding the animation -->
+                            <div class="tut-grid">
+                                <img alt="img1" src="code_snippets/01_codesnippet_css_2.png">
+                                <div>
+                                    <h5>Adding the animation</h5>
+                                    <p>
+                                        To animate the spin loader we first need to create the animation keyframes. For the spin loader we need to animate it to do 
+                                        a full circle around in a clockwise direction. Follow the code snippet to help you along to create the keyframes for the 
+                                        animation. Additionally, we need to add the animation keyframes to the styled spin loader container - copy exactly what's on the 
+                                        code snippet, specifically the bit under <code>div.spin-loader &lbrace;</code>
+                                    </p>
+                                    <br><br>
+                                    <h5>And that is all...</h5>
+                                    <p>
+                                        You have successfully created a spin loader for your website using CSS and HTML. At the moment this "loader" does not 
+                                        disappear or appear unless you intergrate your own code for it to be used properly. 
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Expected Outcome V1.0 -->
+                            <div class="exp-out">
+                                <h4 style="font-weight: normal;">EXPECTED OUTCOME</h4>
+                                <div class="spin-loader"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="margin-top: auto">
+            <!-- Footer Design Wave-->
+            <img src="../img/svg/StackedWave1.svg" alt="stac" style="display: block; width: 100%;">
+
+            <!-- Footer -->
+            <footer>
+                <div class="wrapper">
+                    <div class="socials-button-container movable opacity">
+                        <button class="popupOpenButton" data-find-id="mySocials">My Socials</button>
+                    </div>
+                    <div class="copyright movable opacity fast-delay">
+                        Website created by <span class="greenify">Claasgreeneye</span>.<br> &copy; Copyright 2024
+                    </div>
+                </div>
+                <div class="wrapper w2">
+                    <div class="extra-footer-buttons">
+                        <a href="../disclaimers.html" target="_blank">Disclaimers & Credits</a>
+                        <a href="../version-changelog.html" target="_blank">Version Changelog</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

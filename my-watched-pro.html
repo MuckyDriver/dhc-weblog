@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Webpage Information -->
+        <title>DHCWeblog &bull; MyWatched</title>
+
+        <!-- Links: Styling & Icon -->
+        <link rel="icon" href="img/icon.svg">
+        <link rel="stylesheet" href="styles/css/main.css"><!-- Make sure this LINK is above all other stylesheet LINKS -->
+        <link rel="stylesheet" href="styles/css/popup.css"><!-- Make sure this LINK is under the main.css LINK -->
+        <link rel="stylesheet" href="styles/css/search-box.css"><!-- Make sure this LINK is under the main.css LINK -->
+        <link rel="stylesheet" href="web-tools/css/movables.css"><!-- Make sure this LINK is under the main.css LINK -->
+        <link rel="stylesheet" href="styles/css/mwpro.css"><!-- Make sure this LINK is under the main.css LINK -->
+
+        <!-- Meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Claasgreeneye">
+        <meta name="description" content="A portfolio website with the purpose of showcasing my knowledge in website development and beyond!">
+
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script defer src="scripts/js/popup.jquery.js"></script>
+        <script defer src="web-tools/js/movables.jquery.js"></script>
+        <script src="scripts/js/main.search.jquery.js"></script>
+        <script defer src="scripts/js/accordion.jquery.js"></script>
+        <script src="scripts/js/disclaimer.jquery.js"></script>
+        <script src="scripts/js/mwpro.jquery.js"></script>
+    </head>
+    <body>
+
+        <!-- In-Website Search -->
+        <div class="search-box closed">
+            <div class="container" id="sb-container">
+                <div class="searcher">
+                    <input type="search" id="searchInput" placeholder="Search by keyword..." data-locale="data/json/search.json">
+                    <button id="searchActionButton"><img src="img/icon/000/search.svg" alt="Search"></button>
+                    <button id="searchCloseButton"><img src="img/icon/000/close.svg" alt="Close"></button>
+                </div>
+                <div class="search-results" id="searchResultsContainer"></div>
+                <div class="search-error">Could not find any results using such keyword(s)</div>
+                <div class="search-empty">Start searching by entering a keyword...</div>
+            </div>
+        </div>
+
+        <!-- Pop Up Boxes -->
+        <!-- Social Media (MySocials) -->
+        <div class="popup closed" id="mySocials">
+            <div class="container">
+                <div class="head">
+                    <span class="title">My Socials & Connections</span>
+                    <button class="popupCloseButton tp-box"><img src="img/icon/000/close.svg" alt="close button"><span class="tooltip">Close</span></button>
+                </div>
+                <div class="body">
+                    <div class="socials-container">
+                        <a href="https://discord.gg/u9UhQG5ggW" target="_blank"><img alt="discord" src="img/icon/icons8/icons8-discord-96.png"><span>Discord (Invite Link)</span></a>
+                        <a href="https://github.com/MuckyDriver" target="_blank"><img alt="github" src="img/icon/icons8/icons8-github-96.png"><span>Github</span></a>
+                        <a href="https://twitter.com/Claasgreeneye" target="_blank"><img alt="twitter" src="img/icon/icons8/icons8-twitter-96.png"><span>X/Twitter</span></a>
+                        <a href="https://www.youtube.com/@claasgreeneye" target="_blank"><img alt="youtube" src="img/icon/icons8/icons8-youtube-96.png"><span>Youtube</span></a>
+                        <a href="mailto:claasgreeneye@protonmail.com"><img alt="protonmail" src="img/icon/icons8/icons8-protonmail-96.png"><span>ProtonMail</span></a>
+                    </div>
+                    <div class="credit-icons8">
+                        Social icons by <a href="https://icons8.com">Icons8</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expansions and Services (Expansions Popup) -->
+        <div class="popup closed" id="myServices">
+            <div class="container">
+                <div class="head">
+                    <span class="title">Services</span>
+                    <button class="popupCloseButton tp-box"><img src="img/icon/000/close.svg" alt="close button"><span class="tooltip">Close</span></button>
+                </div>
+                <div class="body faded">
+                    <p><i>Expansions and services are still to be developed, come back another time.</i></p>
+                    <p>
+                        What would the expansions and services be? Expansions will be different websites which are directly linked to my brand and myself.
+                        This will eventually include a whole range of websites including subdomains for people to visit and use in the future.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Index Page welcome banner (using main) -->
+        <main>
+            <div class="top">
+                <div class="logo">
+                    <img src="img/other/something_furry.png" alt="logo icon svg">
+                    <span>DHC<br>WEBLOG<sup>&copy;</sup></span>
+                </div>
+
+                <div class="services">
+                    <div class="tp-box">
+                        <button data-find-id="myServices" class="popupOpenButton"><img src="img/icon/fff/apps_waffleicon.svg" alt="services" width="30"></button>
+                        <div class="tooltip right">Expansions / Services</div>
+                    </div>
+                    <div class="tp-box">
+                        <button id="searchOpenButton"><img src="img/icon/fff/search.svg" alt="services" width="30"></button>
+                        <div class="tooltip">Search</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header section will include quick navigation which will stick to the top of the page after index page welcome banner. -->
+            <header>
+                <nav>
+                    <div>
+                        <a class="button-type-0 tp-box" href="about-me.html">
+                            <img src="img/icon/9fafc1/person_profile.svg" alt="index">
+                            <span>Return to about me page</span>
+                            <div class="tooltip left">Go Back</div>
+                        </a>
+                    </div>
+                </nav>
+            </header>
+        </main>
+
+        <!-- Main content of page is below -->
+        <section>
+            <div class="wrapper">
+                <h2>MyWatched <span class="greenify">Pro</span></h2>
+                <p class="greyify">
+                    Bringing legacy pages like "TV Shows" and "Movies" together in one place. You can toggle between tv shows or movies that I have watched.
+                    You can also see what tv series I am currently watching - which would have a flashing green indicator.
+                </p>
+            </div>
+        </section>
+
+        <!-- About me content -->
+        <section style="margin-bottom: 2em">
+            <div class="wrapper">
+
+                <div class="mwpro-page-switch" id="mwpro-page-switch">
+                    <button data-nav-id="mwpro-tv-shows" class="active"><img src="img/icon/9fafc1/tv-show.svg" alt="tv-shows"><span>Shows</span><span class="num">55</span></button>
+                    <button data-nav-id="mwpro-movies"><img src="img/icon/9fafc1/movies.svg" alt="movies"><span>Movies</span><span class="num">51</span></button>
+                </div>
+    
+                <div class="mwpro-pages" id="mwpro-pages">
+    
+                    <div id="mwpro-tv-shows">
+                        
+                        <h5>Star Trek</h5>
+                        <div class="list">
+                            <span>Star Trek - The Original Series</span>
+                            <span>Star Trek - Picard</span>
+                            <span>Star Trek - Discovery</span>
+                            <span>Star Trek - Strange New Worlds</span>
+                            <span>Star Trek - Voyager</span>
+                            <span>Star Trek - Deep Space Nine</span>
+                            <span>Star Trek - The Next Generation</span>
+                            <span>Star Trek - Lower Decks</span>
+                        </div>
+
+                        <br><h5>British Crime Drama</h5>
+                        <div class="list">
+                            <span>Silent Witness</span>
+                            <span>Happy Valley</span>
+                            <span>Death in Paradise</span>
+                            <span>Sherwood</span>
+                            <span>Line of Duty</span>
+                            <span>Shakespeare & Hathaway - Private Investigations</span>
+                            <span>The Missing</span>
+                            <span>Jonathan Creek</span>
+                            <span>Guilt</span>
+                            <span>Showtrial</span>
+                            <span>The Mallorca Files</span>
+                            <span>The Capture</span>
+                            <span>Luther</span>
+                            <span>Traces</span>
+                            <span>Bloodlands</span>
+                            <span>Waking the Dead</span>
+                            <span>Cardinal</span>
+                            <span>Vigil</span>
+                            <span>London Kills</span>
+                            <span>Sherlock</span>
+                            <span>Baptiste</span>
+                            <span>Blue Lights</span>
+                            <span>Magpie Murders</span>
+                            <span>Beyond Paradise</span>
+                            <span>Life on Mars</span>
+                            <span class="watching"><span class="live"></span>Vera</span>
+                        </div>
+
+                        <br><h5>American Crime Drama</h5>
+                        <div class="list">
+                            <span>Rabbit Hole</span>
+                            <span>Murder She Wrote</span>
+                            <span>The Glades</span>
+                            <span>24</span>
+                            <span>24 Legacy</span>
+                            <span>NCIS</span>
+                            <span>NCIS Hawaii</span>
+                            <span>Bones</span>
+                            <span>Criminal Minds</span>
+                            <span>Criminal Minds - Beyond Borders</span>
+                            <span>Criminal Minds - Suspect Behaviour</span>
+                            <span>Law & Order - Special Victims Unit</span>
+                            <span>Ransom</span>
+                            <span>Elementary</span>
+                            <span>CSI: Crime Scene Investigation (Seasons 12-15)</span>
+                            <span>Hawaii Five-O (Seasons 6-10)</span>
+                            <span class="watching"><span class="live"></span>Dexter</span>
+                        </div>
+
+                        <br><h5>Other</h5>
+                        <div class="list">
+                            <span>Crossing Lines</span>
+                            <span>Departure</span>
+                            <span>Three Pines</span>
+                            <span class="watching"><span class="live"></span>Still Game</span>
+                        </div>
+                    </div>
+    
+                    <div id="mwpro-movies" style="display: none;">
+                        
+                        <h5>Planet Of The Apes</h5>
+                        <div class="list">
+                            <span>Rise of the Planet of the Apes</span>
+                            <span>Dawn of the Planet of the Apes</span>
+                            <span>War for the Planet of the Apes</span>
+                            <span>Kingdom of the Planet of the Apes</span>
+                        </div>
+
+                        <br><h5>Star Wars</h5>
+                        <div class="list">
+                            <span>Star Wars - The Phantom Menace (Episode I)</span>
+                            <span>Star Wars - Attack of the Clones (Episode II)</span>
+                            <span>Star Wars - Revenge of the Sith (Episode III)</span>
+                            <span>Star Wars - A New Hope (Episode IV)</span>
+                            <span>Star Wars - The Empire Strikes Back (Episode V)</span>
+                            <span>Star Wars - The Return of the Jedi (Episode VI)</span>
+                            <span>Star Wars - The Force Awakens (Episode VII)</span>
+                            <span>Star Wars - The Last Jedi (Episode VIII)</span>
+                            <span>Star Wars - The Rise of Skywalker (Episode IX)</span>
+                        </div>
+
+                        <br><h5>Jurassic Park & Jurassic World</h5>
+                        <div class="list">
+                            <span>Jurassic Park</span>
+                            <span>Jurassic Park II - The Lost World</span>
+                            <span>Jurassic Park III</span>
+                            <span>Jurassic World</span>
+                            <span>Jurassic World II - Fallen Kingdom</span>
+                            <span>Jurassic World III - Dominion</span>
+                        </div>
+
+                        <br><h5>Star Trek</h5>
+                        <div class="list">
+                            <span>Star Trek - The Motion Picture</span>
+                            <span>Star Trek II - The Wrath of Khan</span>
+                            <span>Star Trek III - The Search for Spock</span>
+                            <span>Star Trek IV - The Voyage Home</span>
+                            <span>Star Trek V - The Final Frontier</span>
+                            <span>Star Trek VI - The Undiscovered Country</span>
+                            <span>Star Trek - Generations</span>
+                            <span>Star Trek - First Contact</span>
+                            <span>Star Trek - Insurrection</span>
+                            <span>Star Trek - Nemesis</span>
+                        </div>
+
+                        <br><h5>Star Trek (Kelvin Timeline)</h5>
+                        <div class="list">
+                            <span>Star Trek</span>
+                            <span>Star Trek - Into Darkness</span>
+                            <span>Star Trek - Beyond</span>
+                        </div>
+
+                        <br><h5>Mission Impossible</h5>
+                        <div class="list">
+                            <span>Mission Impossible 1</span>
+                            <span>Mission Impossible 2</span>
+                            <span>Mission Impossible 3</span>
+                            <span>Mission Impossible - Ghost Protocol</span>
+                            <span>Mission Impossible - Rogue Nation</span>
+                            <span>Mission Impossible - Fallout</span>
+                            <span>Mission Impossible - Dead Reckoning Part One</span>
+                        </div>
+
+                        <br><h5>Animation / Family</h5>
+                        <div class="list">
+                            <span>The Lorax</span>
+                            <span>Pete's Dragon</span>
+                        </div>
+
+                        <br><h5>Other</h5>
+                        <div class="list">
+                            <span>Top Gun: Maverick</span>
+                            <span>Unstoppable</span>
+                            <span>Deepwater Horizon</span>
+                            <span>The Hunt For Red October</span>
+                        </div>
+
+                        <br><h5>Other (Science Fiction)</h5>
+                        <div class="list">
+                            <span>Armageddon</span>
+                            <span>Avatar</span>
+                            <span>Independence Day</span>
+                            <span>Independence Day - Resurgence</span>
+                            <span>The Day After Tomorrow</span>
+                            <span>Geostorm</span>
+                            <span>2012</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="margin-top: auto">
+            <!-- Footer Design Wave-->
+            <img src="img/svg/StackedWave1.svg" alt="stac" style="display: block; width: 100%;">
+
+            <!-- Footer -->
+            <footer>
+                <div class="wrapper">
+                    <div class="socials-button-container movable opacity">
+                        <button class="popupOpenButton" data-find-id="mySocials">My Socials</button>
+                    </div>
+                    <div class="copyright movable opacity fast-delay">
+                        Website created by <span class="greenify">Claasgreeneye</span>.<br> &copy; Copyright 2024
+                    </div>
+                </div>
+                <div class="wrapper w2">
+                    <div class="extra-footer-buttons">
+                        <a href="disclaimers.html" target="_blank">Disclaimers & Credits</a>
+                        <a href="version-changelog.html" target="_blank">Version Changelog</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

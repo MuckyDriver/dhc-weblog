@@ -1,0 +1,153 @@
+div.search-box {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%; height: 100vh;
+    align-items: start;
+    z-index: 999;
+    padding: 1em;
+    color: black;
+    backdrop-filter: blur(4px) saturate(50%);
+
+    transition:
+        opacity 0.2s ease-in-out,
+        transform 0.2s ease-in-out,
+        backdrop-filter 0.2s ease-in-out
+    ;
+}
+
+div.search-box.closed {
+    pointer-events: none;
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    transform: translateY(-20px);
+}
+
+div.search-box > div.container {
+    background-color: white;
+    border-radius: var(--boxRoundness);
+    width: 100%; max-width: var(--pageWidth);
+    max-height: 100%;
+
+    overflow-y: auto;
+}
+
+div.search-box > div.container > div.searcher {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    background-color: white;
+    gap: 1em;
+    display: grid;
+    grid-template-columns: auto max-content max-content;
+}
+
+div.search-box > div.container > div.searcher input[type="search"] {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px rgba(0, 0, 0, 0.2) solid;
+    width: 100%;
+    border-radius: var(--boxRoundness);
+    padding: 1em;
+    font-family: inherit;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+@media (max-width: 480px) {
+    div.search-box > div.container > div.searcher {
+        grid-template-columns: none;
+        grid-template-areas: 
+            's s'
+            'x y'
+        ;
+    }
+
+    div.search-box > div.container > div.searcher input[type="search"] {
+        grid-area: s;
+    }
+
+    div.search-box > div.container > div.searcher button#searchActionButton {
+        grid-area: x;
+    }
+
+    div.search-box > div.container > div.searcher button#searchCloseButton {
+        grid-area: y;
+    }
+}
+
+div.search-box > div.container > div.searcher button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+    border: none;
+    background-color: var(--mainColorDesign);
+    border-radius: var(--boxRoundness);
+    border: transparent solid 1px;
+    transition: all ease-in-out 0.2s;
+}
+
+div.search-box > div.container > div.searcher button:hover {
+    background-color: white;
+    border-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+div.search-box > div.container > div.search-results {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease-in-out;
+}
+
+div.search-box > div.container > div.search-results > a.search-result {
+    display: flex;
+    gap: 0.33em;
+    flex-direction: column;
+    font-weight: 100;
+    font-size: x-large;
+    padding: 1em 20px;
+    color: var(--mainColorDark);
+    text-decoration: none;
+
+    transition: 
+        background-color 0.1s ease-in-out, 
+        opacity 0.05s ease-in-out
+    ;
+}
+
+div.search-box > div.container > div.search-results > a.search-result.old {
+    opacity: 0.5;
+}
+
+div.search-box > div.container > div.search-results > a.search-result:hover {
+    background-color: var(--mainColorDesignTrans);
+    opacity: 1;
+}
+
+div.search-box > div.container > div.search-results > a.search-result:focus-within {
+    background-color: var(--mainColorDesignTrans);
+    outline: none;
+    opacity: 1;
+}
+
+div.search-box > div.container > div.search-results > a.search-result span.small {
+    font-size: small;
+    color: var(--mainColorLightDark);
+    font-weight: normal;
+}
+
+div.search-error {
+    display: none;
+    padding: 1.5em;
+    background-color: rgb(255, 206, 213);
+    color: rgb(146, 65, 65);
+}
+
+div.search-empty {
+    display: none;
+    padding: 1.5em;
+    color: rgb(97, 97, 97);
+}

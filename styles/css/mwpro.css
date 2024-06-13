@@ -1,0 +1,116 @@
+/* mwpro-page-switch */
+div.mwpro-page-switch {
+    display: grid;
+    grid-template-columns: calc(50% - 0.5em) calc(50% - 0.5em);
+    gap: 1em;
+}
+
+div.mwpro-page-switch button {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6em;
+    padding: 1em;
+    background-color: var(--mainColorLightDark);
+    border: none;
+    border-radius: var(--boxRoundness);
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--mainColorLightGreyText);
+    border: solid 2px var(--mainColorLightDark);
+    cursor: pointer;
+    transition: all 0.125s ease-in-out;
+}
+
+div.mwpro-page-switch button img {
+    width: 1.3rem;
+}
+
+div.mwpro-page-switch button.active {
+    background-color: var(--mainColorDark);
+}
+
+div.mwpro-page-switch button:hover, div.mwpro-page-switch button:focus-visible {
+    background-color: var(--mainColorDark);
+}
+
+div.mwpro-page-switch button span.num {
+    background-color: var(--mainColorDesignTrans2);
+    border: solid 1px var(--mainColorDesignTrans);
+    padding: 0.125em 0.5em;
+    color: var(--mainColorDesign);
+    border-radius: var(--boxRoundness2);
+}
+
+/* mwpro-pages */
+div.mwpro-pages { 
+    background: linear-gradient(to bottom, var(--mainColorLightDark) -150%, transparent);
+    margin-top: 1em; 
+    border-radius: var(--boxRoundness2);
+}
+
+div.mwpro-pages > * {
+    padding: 0.5em 2em;
+    color: var(--mainColorLightGreyText);
+}
+
+div.mwpro-pages > * div.list {
+    display: flex;
+    margin-top: 1em;
+    flex-wrap: wrap;
+    gap: 0.66em;
+}
+
+div.mwpro-pages > * div.list > span {
+    background-color: var(--mainColorDesignTrans);
+    padding: 0.75em 1.25em;
+    color: white;
+    font-size: smaller;
+    line-height: 1.4;
+    border-radius: var(--boxRoundness);
+    overflow: hidden;
+    position: relative;
+}
+
+div.mwpro-pages > * div.list > span.watching {
+    background-color: var(--mainColorLightDark);
+}
+
+div.mwpro-pages > * div.list > span > span.live {
+    position: relative;
+    padding: 0.66em;
+    animation: in-and-out-fade 2s ease-in-out infinite;
+}
+
+@keyframes in-and-out-fade {
+    0% { opacity: 1; }
+    50% { opacity: 0.25; }
+    100% { opacity: 1; }
+}
+
+div.mwpro-pages > * div.list > span > span.live::after {
+    content: "";
+    position: absolute;
+    background-color: lightgreen;
+    width: 10px; 
+    height: 10px;
+    left: 0px;
+    top: 50%; transform: translateY(-50%);
+    border-radius: 100%;
+}
+
+@media (max-width: 600px) {
+    div.mwpro-pages > * div.list {
+        gap: 0.66em;
+    }
+
+    div.mwpro-pages > * div.list > span {
+        font-size: small;
+    }
+
+    div.mwpro-page-switch button span.num {
+        display: none;
+    }
+    
+}

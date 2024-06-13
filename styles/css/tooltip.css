@@ -1,0 +1,51 @@
+/* Tooltips */
+.tp-box {
+    position: relative;
+    color: white;
+}
+
+.tp-box:hover > :is(div, span).tooltip {
+    opacity: 1;
+    bottom: -6px;
+}
+
+.tp-box:focus > :is(div, span).tooltip {
+    opacity: 1;
+    bottom: -6px;
+}
+
+:is(div, span).tooltip {
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    display: inline-block;
+    opacity: 0;
+    background-color: var(--mainColorLightDark);
+    border-radius: var(--boxRoundness);
+    color: white;
+    padding: 8px;
+    left: 50%;
+    bottom: 0%;
+    font-size: smaller;
+    transform: translate(-50%, 100%);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    z-index: 1001;
+    transition: opacity 0.125s ease-in-out, bottom 0.125s ease-in-out;
+}
+
+:is(div, span).tooltip.left {
+    transform: translate(0%, 100%);
+    left: 0%;
+}
+
+:is(div, span).tooltip.right {
+    transform: translate(-100%, 100%);
+    left: 100%;
+}
+
+:is(div, span).tooltip.side {
+    transform: translate(100%, -50%);
+    left: 0%; top: 50%;
+}

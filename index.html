@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Webpage Information -->
+        <title>DHCWeblog &bull; Homepage</title>
+
+        <!-- Links: Styling & Icon -->
+        <link rel="icon" href="img/icon.svg">
+        <link rel="stylesheet" href="styles/css/main.css"><!-- Make sure this LINK is above all other stylesheet LINKS -->
+        <link rel="stylesheet" href="styles/css/popup.css"><!-- Make sure this LINK is under the main.css LINK -->
+        <link rel="stylesheet" href="styles/css/search-box.css"><!-- Make sure this LINK is under the main.css LINK -->
+        <link rel="stylesheet" href="web-tools/css/movables.css"><!-- Make sure this LINK is under the main.css LINK -->
+
+        <!-- Meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Claasgreeneye">
+        <meta name="description" content="A portfolio website with the purpose of showcasing my knowledge in website development and beyond!">
+
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script defer src="scripts/js/popup.jquery.js"></script>
+        <script defer src="web-tools/js/movables.jquery.js"></script>
+        <script src="scripts/js/main.search.jquery.js"></script>
+        <script src="scripts/js/disclaimer.jquery.js"></script>
+    </head>
+    <body>
+        <!-- In-Website Search -->
+        <div class="search-box closed">
+            <div class="container" id="sb-container">
+                <div class="searcher">
+                    <input type="search" id="searchInput" placeholder="Search by keyword...">
+                    <button id="searchActionButton"><img src="img/icon/000/search.svg" alt="Search"></button>
+                    <button id="searchCloseButton"><img src="img/icon/000/close.svg" alt="Close"></button>
+                </div>
+                <div class="search-results" id="searchResultsContainer"></div>
+                <div class="search-error">Could not find any results using such keyword(s)</div>
+                <div class="search-empty">Start searching by entering a keyword...</div>
+            </div>
+        </div>
+
+        <!-- Pop Up Boxes -->
+        <!-- Social Media (MySocials) -->
+        <div class="popup closed" id="mySocials">
+            <div class="container">
+                <div class="head">
+                    <span class="title">My Socials & Connections</span>
+                    <button class="popupCloseButton tp-box"><img src="img/icon/000/close.svg" alt="close button"><span class="tooltip">Close</span></button>
+                </div>
+                <div class="body">
+                    <div class="socials-container">
+                        <a href="https://discord.gg/u9UhQG5ggW" target="_blank"><img alt="discord" src="img/icon/icons8/icons8-discord-96.png"><span>Discord (Invite Link)</span></a>
+                        <a href="https://github.com/MuckyDriver" target="_blank"><img alt="github" src="img/icon/icons8/icons8-github-96.png"><span>Github</span></a>
+                        <a href="https://twitter.com/Claasgreeneye" target="_blank"><img alt="x" src="img/icon/icons8/icons8-twitter-96.png"><span>X/Twitter</span></a>
+                        <a href="https://www.youtube.com/@claasgreeneye" target="_blank"><img alt="youtube" src="img/icon/icons8/icons8-youtube-96.png"><span>Youtube</span></a>
+                        <a href="mailto:claasgreeneye@protonmail.com"><img alt="protonmail" src="img/icon/icons8/icons8-protonmail-96.png"><span>ProtonMail</span></a>
+                    </div>
+                    <div class="credit-icons8">
+                        Social icons by <a href="https://icons8.com">Icons8</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expansions and Services (Expansions Popup) -->
+        <div class="popup closed" id="myServices">
+            <div class="container">
+                <div class="head">
+                    <span class="title">Services</span>
+                    <button class="popupCloseButton tp-box"><img src="img/icon/000/close.svg" alt="close button"><span class="tooltip">Close</span></button>
+                </div>
+                <div class="body faded">
+                    <p><i>Expansions and services are still to be developed, come back another time.</i></p>
+                    <p>
+                        What would the expansions and services be? Expansions will be different websites which are directly linked to my brand and myself.
+                        This will eventually include a whole range of websites including subdomains for people to visit and use in the future.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Index Page welcome banner (using main) -->
+        <main class="index">
+            <div class="top">
+                <div class="logo">
+                    <img src="img/icon.svg" alt="logo icon svg">
+                    <span>DHC<br>WEBLOG<sup>&copy;</sup></span>
+                </div>
+
+                <div class="services">
+                    <div class="tp-box">
+                        <button data-find-id="myServices" class="popupOpenButton"><img src="img/icon/fff/apps_waffleicon.svg" alt="services" width="30"></button>
+                        <div class="tooltip right">Expansions / Services</div>
+                    </div>
+                    <div class="tp-box">
+                        <button id="searchOpenButton"><img src="img/icon/fff/search.svg" alt="search" width="30"></button>
+                        <div class="tooltip">Search</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner -->
+            <div class="banner">
+                <div>
+                    Welcome to <span class="greenify b-600">DHCWeblog 2024</span>. A portfolio website with the purpose of showcasing my knowledge in website 
+                    development and beyond!
+                </div>
+            </div>
+        </main>
+
+        <!-- Header section will include quick navigation which will stick to the top of the page after index page welcome banner. -->
+        <header>
+            <nav class="movable from-bottom opacity">
+                <a href="/" class="tp-box"><img src="img/icon.svg" alt="icon"><div class="tooltip">Homepage</div></a>
+                <a href="about-me.html" class="tp-box"><img src="img/icon/9fafc1/person_profile.svg" alt="about me icon"><div class="tooltip">About Me</div></a>
+                <a href="tutorial.html" class="tp-box"><img src="img/icon/9fafc1/edu_tutorial.svg" alt="development"><div class="tooltip">Development Tutorials</div></a>
+                <a href="website-history.html" class="tp-box"><img src="img/icon/9fafc1/versions.svg" alt="website history"><div class="tooltip">Website History</div></a>
+                <a href="https://projects.dhcweblogistics.net" class="tp-box hidden"><img src="img/icon/9fafc1/design_or_projects.svg" alt="projects subdomain"><div class="tooltip">Projects</div></a>
+            </nav>
+        </header>
+
+        <!-- Main content of page is below -->
+        <section class="circuit">
+            <div class="wrapper">
+                <h2>Introduction</h2>
+                <p class="greyify">
+                    DHCWeblog also known as DHCWeblogistics is a porfolio website with the purpose of showcasing my skills and knowledge in 
+                    website development, game development and concept designing. I hope that future job employers can look at this website and learn about my skillset 
+                    and how good I am doing certain things and what is unique about what I do within the field of computing. Thank you for stopping by and visiting my portfolio.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrapper">
+                <h2>Features</h2>
+
+                <!-- A grid below listing the 3 main features of DHCWeblog 2024. -->
+                <div class="triple-grid">
+                    <div class="movable from-right opacity">
+                        <div class="i"><img alt="icon-x" src="img/icon/87cc0f/person_profile.svg"><span>About Me</span></div>
+                        <div class="t">
+                            Learn something about me like my development history and what knowledge I have 
+                            gathered along the years in training.
+                        </div>
+                    </div>
+
+                    <div class="movable from-right opacity fast-delay">
+                        <div class="i"><img alt="icon-x" src="img/icon/87cc0f/edu_tutorial.svg"><span>Tutorials</span></div>
+                        <div class="t">
+                            Quick and easy guides on website development. Tutorials on HTML, CSS, JavaScript and more!
+                        </div>
+                    </div>
+
+                    <div class="movable from-right opacity delay">
+                        <div class="i"><img alt="icon-x" src="img/icon/87cc0f/design_or_projects.svg"><span>Projects</span></div>
+                        <div class="t">
+                            A subdomain where I showcase all of my past creations and projects. Consists of Roblox game development and website
+                            development. (Coming Soon)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Design Wave--><img src="img/svg/StackedWave1.svg" alt="stac" style="display: block; width: 100%;">
+        <!-- Footer -->
+        <footer>
+            <div class="wrapper">
+                <div class="socials-button-container movable opacity">
+                    <button class="popupOpenButton" data-find-id="mySocials">My Socials</button>
+                </div>
+                <div class="copyright movable opacity fast-delay">
+                    Website created by <span class="greenify">Claasgreeneye</span>.<br> &copy; Copyright 2024
+                </div>
+            </div>
+            <div class="wrapper w2">
+                <div class="extra-footer-buttons">
+                    <a href="disclaimers.html" target="_blank">Disclaimers & Credits</a>
+                    <a href="version-changelog.html" target="_blank">Version Changelog</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

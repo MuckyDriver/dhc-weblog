@@ -1,0 +1,51 @@
+{
+    "results": [
+
+        { 
+            "title": "About Me", "url": "/about-me.html", "display-url": "https://dhcweblogistics.net/about-me",
+            "keywords": ["about", "me", "aboutme", "profile", "information", "info", "skills", "skill", "knowledge"] 
+        },
+
+        { 
+            "title": "Development Tutorials", "url": "/tutorial.html", "display-url": "https://dhcweblogistics.net/tutorial",
+            "keywords": ["development", "tutorials", "tutorial", "guide", "guides", "learn"] 
+        },
+
+        {
+            "title": "Custom Loading Spinner", "url": "/tutorial/custom-loading-spinner.html", "display-url": "https://dhcweblogistics.net/tutorial/custom-loading-spinner",
+            "keywords": ["tutorial", "tutorials", "css", "html", "learn", "guide", "animation", "loading spinner", "loading", "spinner", "custom loading spinner"]
+        },
+
+        { 
+            "title": "Website History", "url": "/website-history.html", "display-url": "https://dhcweblogistics.net/website-history",
+            "keywords": ["website", "history", "timeline", "old", "new"] 
+        },
+
+        { 
+            "title": "Homepage", "url": "/", "display-url": "https://dhcweblogistics.net",
+            "keywords": ["index", "home", "homepage", "page", "dhc", "dhcweblog", "weblog", "dhcweblogistics"] 
+        },
+
+        { 
+            "title": "MyWatched Pro", "url": "/my-watched-pro.html", "display-url": "https://dhcweblogistics.net/my-watched-pro",
+            "keywords": ["mywatched", "watched", "film", "tv", "tv series", "show", "movie", "movies"]
+        },
+
+        { 
+            "title": "Movies", "url": "https://pre.dhcweblogistics.net/movies", "opt-in-class": "old",
+            "keywords": ["movie", "movies", "film", "hobby", "hobbies", "other"]
+        },
+
+        { 
+            "title": "TV Shows", "url": "https://pre.dhcweblogistics.net/tv-shows", "opt-in-class": "old",
+            "keywords": ["tv", "show", "shows", "hobby", "hobbies", "other"]
+        }
+    ],
+
+    "hidden": [
+        { 
+            "title": "Projects", "url": "https://projects.dhcweblogistics.net",
+            "keywords": ["projects", "proj", "work", "development", "project", "develop", "developments", "creation", "creations"] 
+        }
+    ]
+}

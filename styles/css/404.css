@@ -1,0 +1,104 @@
+/* Fonts */
+@import url('../font/rubik.css');
+
+/* Variables */
+:root {
+    --pageWidth: 1100px;
+    --topPartBannerHeight: 120px;
+
+    /* Colours */
+    --mainColorDesign: #ff8b9f;
+    --mainColorDesignTrans: #ff8b9f33;
+    --mainColorDark: #181e2d;
+    --mainColorLightDark: #2e3547;
+    --mainColorLightGreyText: #9FAFC1;
+    --transColorShadow1: rgba(0,0,0,0.25);
+
+    /* Shaping */
+    --boxRoundness: 6px;
+    --boxRoundness2: 12px;
+    --boxRoundness3: 4px;
+    --boxRoundnessFull: 1000px;
+}
+
+/* Generic */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Rubik", sans-serif;
+    background-color: var(--mainColorDark);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Content */
+body > div.main * {
+    margin-block: 0px;
+    max-width: 400px;
+}
+
+body > div.main  img {
+    filter: drop-shadow( 0 0 15rem var(--mainColorDesign) );
+}
+
+body > div.main  {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    width: 100%; height: 100vh;
+    gap: 2em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+body > div.main p {
+    line-height: 1.5;
+}
+
+body > div.main a { 
+    background-color: var(--mainColorDesign);
+    color: var(--mainColorDark);
+    border: 2px solid transparent;
+    padding: 1em;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: var(--boxRoundness);
+
+    transition: all 0.2s ease-in-out;
+}
+
+body > div.main  a:hover { background-color: transparent; border-color: var(--mainColorDesign); color: white; }
+body > div.main  a:focus { outline: none; background-color: transparent; border-color: var(--mainColorDesign); color: white; }
+
+/* Other */
+div.option-grid {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+div.option-grid button {
+    background-color: var(--mainColorDesign);
+    border-radius: var(--boxRoundness);
+    border: none;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0.5em;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: center; align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+div.option-grid button:hover { background-color: transparent; border-color: var(--mainColorDesign) }
+div.option-grid button:focus-visible { background-color: transparent; border-color: var(--mainColorDesign); outline: none; }
+
+div.option-grid button img { filter: invert(0); transition: all 0.2s ease-in-out; }
+
+div.option-grid button:hover img { filter: invert(1) }
+div.option-grid button:focus-visible img { filter: invert(1) }

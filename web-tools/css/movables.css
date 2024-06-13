@@ -1,0 +1,152 @@
+/* Moveables */
+*.movable {
+    position: relative;
+    /* transition: all 0.5s ease-in-out; Using this will mean it will use transitions when scrolling out of frame. */ 
+}
+
+*.movable.show {
+    transition: all 0.5s ease-in-out;
+}
+
+/* Movable Types */
+*.movable.type-linear { transition-timing-function: linear; }
+*.movable.type-overshoot { transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+*.movable.type-back { transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045); }
+*.movable.type-steps-32 { transition-timing-function: steps(32); }
+*.movable.type-steps-24 { transition-timing-function: steps(24); }
+*.movable.type-steps-12 { transition-timing-function: steps(12); }
+*.movable.type-steps-8 { transition-timing-function: steps(8); }
+*.movable.type-steps-6 { transition-timing-function: steps(6); }
+*.movable.type-steps-4 { transition-timing-function: steps(4); }
+*.movable.type-steps-2 { transition-timing-function: steps(2); }
+
+/* Movables - Speed / Delay */
+*.movable.fast { transition-duration: 0.2s; }
+*.movable.slow { transition-duration: 1s; }
+
+*.movable.fast-delay { transition-delay: 0.2s; }
+*.movable.delay { transition-delay: 0.4s; }
+*.movable.slow-delay { transition-delay: 0.8s; }
+
+/* Movables - Basic */
+*.movable.opacity { opacity: 0; }
+*.movable.opacity.show { opacity: 1; }
+
+*.movable.blur { filter: blur(100px); } /* Requires "opacity" as well to work properly */
+*.movable.blur.show { filter: blur(0px) }
+
+*.movable.grayscale { filter: grayscale(1) } /* Cannot use this aswell as "blur" */
+*.movable.grayscale.show { filter: grayscale(0) }
+
+/* Movables - Rotate */
+*.movable.rotate { transform: rotate(-90deg); }
+*.movable.rotate.show { transform: rotate(0deg); }
+
+*.movable.from-left-rotate { transform: translateX(-100%) rotate(-90deg); }
+*.movable.from-left-rotate.show { transform: translateX(0%) rotate(0deg); }
+
+*.movable.from-right-rotate { transform: translateX(100%) rotate(-90deg); }
+*.movable.from-right-rotate.show { transform: translateX(0%) rotate(0deg); }
+
+*.movable.from-top-rotate { transform: translateY(-100%) rotate(-90deg); }
+*.movable.from-top-rotate.show { transform: translateX(0%) rotate(0deg); }
+
+*.movable.from-bottom-rotate { transform: translateY(100%) rotate(-90deg); }
+*.movable.from-bottom-rotate.show { transform: translateX(0%) rotate(0deg); }
+
+/* Movables - From */
+*.movable.from-left { transform: translateX(-100%); }
+*.movable.from-left.show { transform: translateX(0%); }
+
+*.movable.from-right { transform: translateX(100%); }
+*.movable.from-right.show { transform: translateX(0%); }
+
+*.movable.from-top { transform: translateY(-100%); }
+*.movable.from-top.show { transform: translateX(0%); }
+
+*.movable.from-bottom { transform: translateY(100%); }
+*.movable.from-bottom.show { transform: translateX(0%); }
+
+/* Movables - Grow */
+*.movable.grow { transform: scale(0); }
+*.movable.grow.show { transform: scale(1); }
+
+*.movable.from-left-grow { transform: translateX(-100%) scale(0); }
+*.movable.from-left-grow.show { transform: translateX(0%) scale(1); }
+
+*.movable.from-right-grow { transform: translateX(100%) scale(0); }
+*.movable.from-right-grow.show { transform: translateX(0%) scale(1); }
+
+*.movable.from-top-grow { transform: translateY(-100%) scale(0); }
+*.movable.from-top-grow.show { transform: translateX(0%) scale(1); }
+
+*.movable.from-bottom-grow { transform: translateY(100%) scale(0); }
+*.movable.from-bottom-grow.show { transform: translateX(0%) scale(1); }
+
+/* Movables - Shrink */
+*.movable.shrink { transform: scale(2); }
+*.movable.shrink.show { transform: scale(1); }
+
+*.movable.from-left-shrink { transform: translateX(-100%) scale(2); }
+*.movable.from-left-shrink.show { transform: translateX(0%) scale(1); }
+
+*.movable.from-right-shrink { transform: translateX(100%) scale(2); }
+*.movable.from-right-shrink.show { transform: translateX(0%) scale(1); }
+
+*.movable.from-top-shrink { transform: translateY(-100%) scale(2); }
+*.movable.from-top-shrink.show { transform: translateX(0%) scale(1); }
+
+*.movable.from-bottom-shrink { transform: translateY(100%) scale(2); }
+*.movable.from-bottom-shrink.show { transform: translateX(0%) scale(1); }
+
+/* Movables - From Left/Right Top, Bottom */
+*.movable.from-top-left { transform: translateY(-100%) translateX(-100%); }
+*.movable.from-top-left.show { transform: translateY(0%) translateX(0%); }
+
+*.movable.from-bottom-left { transform: translateY(100%) translateX(-100%); }
+*.movable.from-bottom-left.show { transform: translateY(0%) translateX(0%); }
+
+*.movable.from-top-right { transform: translateY(-100%) translateX(100%); }
+*.movable.from-top-right.show { transform: translateY(0%) translateX(0%); }
+
+*.movable.from-bottom-right { transform: translateY(100%) translateX(100%); }
+*.movable.from-bottom-right.show { transform: translateY(0%) translateX(0%); }
+
+/* Movables - From Left/Right Top, Bottom - Rotate */
+*.movable.from-top-left-rotate { transform: translateY(-100%) translateX(-100%) rotate(-90deg); }
+*.movable.from-top-left-rotate.show { transform: translateY(0%) translateX(0%) rotate(0deg); }
+
+*.movable.from-bottom-left-rotate { transform: translateY(100%) translateX(-100%) rotate(-90deg); }
+*.movable.from-bottom-left-rotate.show { transform: translateY(0%) translateX(0%) rotate(0deg); }
+
+*.movable.from-top-right-rotate { transform: translateY(-100%) translateX(100%) rotate(-90deg); }
+*.movable.from-top-right-rotate.show { transform: translateY(0%) translateX(0%) rotate(0deg); }
+
+*.movable.from-bottom-right-rotate { transform: translateY(100%) translateX(100%) rotate(-90deg); }
+*.movable.from-bottom-right-rotate.show { transform: translateY(0%) translateX(0%) rotate(0deg); }
+
+/* Movables - From Left/Right Top, Bottom - Shrink */
+*.movable.from-top-left-shrink { transform: translateY(-100%) translateX(-100%) scale(2); }
+*.movable.from-top-left-shrink.show { transform: translateY(0%) translateX(0%) scale(1); }
+
+*.movable.from-bottom-left-shrink { transform: translateY(100%) translateX(-100%) scale(2); }
+*.movable.from-bottom-left-shrink.show { transform: translateY(0%) translateX(0%) scale(1);}
+
+*.movable.from-top-right-shrink { transform: translateY(-100%) translateX(100%) scale(2); }
+*.movable.from-top-right-shrink.show { transform: translateY(0%) translateX(0%) scale(1); }
+
+*.movable.from-bottom-right-shrink { transform: translateY(100%) translateX(100%) scale(2); }
+*.movable.from-bottom-right-shrink.show { transform: translateY(0%) translateX(0%) scale(1); }
+
+/* Movables - From Left/Right Top, Bottom - Grow */
+*.movable.from-top-left-grow { transform: translateY(-100%) translateX(-100%) scale(0); }
+*.movable.from-top-left-grow.show { transform: translateY(0%) translateX(0%) scale(1); }
+
+*.movable.from-bottom-left-grow { transform: translateY(100%) translateX(-100%) scale(0); }
+*.movable.from-bottom-left-grow.show { transform: translateY(0%) translateX(0%) scale(1);}
+
+*.movable.from-top-right-grow { transform: translateY(-100%) translateX(100%) scale(0); }
+*.movable.from-top-right-grow.show { transform: translateY(0%) translateX(0%) scale(1); }
+
+*.movable.from-bottom-right-grow { transform: translateY(100%) translateX(100%) scale(0); }
+*.movable.from-bottom-right-grow.show { transform: translateY(0%) translateX(0%) scale(1); }

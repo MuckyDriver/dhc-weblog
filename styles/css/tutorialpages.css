@@ -1,0 +1,158 @@
+/* Expected Outcome Stuff */
+div.exp-out {
+    text-align: center; 
+    margin-top: 1.5em; 
+    background-color: var(--mainColorDark);
+    padding: 2em;
+    border-radius: var(--boxRoundness2);
+    border: dashed 3px var(--mainColorDesignTrans);
+}
+
+/* Spin Loader EXTRA PROJECT PART ** REMOVE IF BLANK **/
+div.spin-loader {
+    position: relative;
+    margin: 1.5em auto;
+    margin-bottom: 0em;
+
+    border: 10px solid var(--mainColorLightDark);
+    border-right-color: royalblue;
+    border-radius: 50%;
+
+    width: 128px;
+    height: 128px;
+
+    animation-name: spinner;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spinner {
+    to { transform: rotate(1turn); }
+}
+
+/* Tutorial Features */
+div.tutorial-features {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: auto max-content;
+    gap: 1em;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    div.tutorial-features {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+div.tutorial-features div.tutorial-info {
+    line-height: 1.5;
+}
+
+div.tutorial-features div.tutorial-info h4 {
+    margin-block-start: 0em;
+}
+
+div.tutorial-features b {
+    font-weight: 500;
+}
+
+div.tutorial-features a.download-button {
+    text-align: center;
+    padding: 1em 2em;
+    background-color: var(--mainColorDesign);
+    color: black;
+    border-radius: var(--boxRoundness);
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: all 0.125s ease-in-out;
+}
+
+div.tutorial-features a.download-button.disabled {
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.5;
+    background-color: var(--mainColorLightGreyText);
+    color: var(--mainColorDark);
+}
+
+div.tutorial-features a.download-button:hover, div.tutorial-features a.download-button:focus-visible {
+    background-color: var(--mainColorDark);
+    color: var(--mainColorLightGreyText);
+    border-color: var(--mainColorDesignTrans);
+}
+
+/* TUT Grid */
+div.tut-grid {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 50% calc(50% - 1em);
+    gap: 1em;
+}
+
+div.tut-grid img { 
+    border-radius: var(--boxRoundness2);
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (max-width: 800px) {
+    div.tut-grid {
+        display: flex;
+        flex-direction: column;
+    } 
+}
+
+/* Other */
+code {
+    background-color: var(--mainColorDark);
+    font-size: 16px;
+}
+
+/* Code JS */
+code.js {
+    display: block;
+    padding: 2em;
+    background-color: var(--mainColorDark);
+    font-size: larger;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+code.js div.indent {
+    padding-left: 2em;
+}
+
+code.js span#dlr { color: lightskyblue; font-weight: bold; }
+code.js span#str { color: tan; }
+code.js span#func { color: plum; font-weight: bold; }
+code.js span#hint { color: gray; }
+
+/* Img container */
+div.imgContainer {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1em;
+    z-index: 10000;
+    backdrop-filter: blur(4px) saturate(50%) brightness(50%);
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+}
+
+div.imgContainer > div {
+    font-size: 14px;
+    font-weight: 100;
+    padding: 1em 1.5em;
+}
+
+div.imgContainer > img {
+    border-radius: var(--boxRoundness2);
+} 

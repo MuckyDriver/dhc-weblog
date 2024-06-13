@@ -1,0 +1,118 @@
+/* Popup */
+div.popup {
+    width: 100vw; height: 100vh;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 1099;
+    backdrop-filter: blur(4px) saturate(50%);
+
+    transition: 
+        opacity 0.25s ease-in-out,
+        transform 0.25s ease-in-out,
+        backdrop-filter 0.25s ease-in-out
+    ;
+}
+
+div.popup.closed {
+    opacity: 0;
+    transform: translateY(-20px);
+    backdrop-filter: blur(0px);
+    pointer-events: none;
+}
+
+div.popup > div.container {
+    width: calc(100% - 2em);
+    max-width: 600px;
+    max-height: calc(100vh - 2em);
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+    border-radius: var(--boxRoundness);
+    color: black;
+}
+
+/* DIV Popup Head */
+div.popup > div.container > div.head {
+    padding: 1em 1.5em;
+    display: grid;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    grid-template-columns: auto auto;
+    gap: 2em;
+    align-items: center;
+}
+
+div.popup > div.container > div.head > span.title {
+    font-size: x-large;
+    font-weight: 100;
+}
+
+
+div.popup > div.container > div.head > button {
+    font-size: 16px;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    justify-self: end;
+    height: 40px; width: 40px;
+    background-color: transparent;
+    border: none;
+    border-radius: var(--boxRoundness);
+}
+
+div.popup > div.container > div.head > button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+div.popup > div.container > div.head > button img {
+    width: 40px;
+}
+
+/* DIV Popup Body */
+div.popup > div.container > div.body {
+    padding: 1em 1.5em;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+div.popup > div.container > div.body.faded {
+    color: rgba(0, 0, 0, 0.7)
+}
+
+/* Social Container */
+div.socials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+div.socials-container > a {
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--boxRoundness);
+    gap: 0.66em;
+    color: var(--mainColorDark);
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.5em 1em;
+    border: solid 1px transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+div.socials-container > a:hover {
+    background-color: white;
+    border-color: var(--mainColorDark);
+}
+
+div.socials-container > a img {
+    width: 24px;
+}
+
+@media (max-width: 600px) {
+    div.socials-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

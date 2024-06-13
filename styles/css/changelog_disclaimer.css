@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    align-items: center;
+}
+
+div.main {
+    padding: 0em 2em;
+    margin-bottom: 2em;
+    max-width: 1000px;
+    width: 100%;
+}
+
+div.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+div.list > details {
+    background-color: var(--mainColorLightDark);
+    max-width: 1000px;
+    border-radius: var(--boxRoundness3);
+    line-height: 1.4;
+}
+
+div.list > details div {
+    padding: 1em;
+    border-top: 2px solid var(--mainColorDesignTrans);
+    color: var(--mainColorLightGreyText);
+}
+
+div.list > details div ul {
+    line-height: 1.4;
+}
+
+div.list > details div ul li::marker {
+    color: var(--mainColorDesign);
+}
+
+
+div.list > details[open] summary img[alt="expand"] { transform: rotate(-180deg);}
+
+div.list > details summary {
+    user-select: none;
+    cursor: pointer;
+    padding: 1em;
+    display: grid;
+    gap: 0.75em;
+    grid-template-columns: max-content auto auto max-content;
+    align-items: center;
+}
+
+div.changelog-header {
+    padding: 2em 2em;
+    display: grid;
+    grid-template-columns: auto max-content;
+    gap: 2em;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+div.changelog-header a {
+    background-color: var(--mainColorDesignTrans2);
+    display: flex;
+    border-radius: var(--boxRoundness3);
+    transition: background 0.125s ease-in-out;
+}
+
+div.changelog-header a:hover, div.changelog-header a:focus-visible {
+    background-color: var(--mainColorDesignTrans);
+}
+
+div.changelog-header a > img { max-width: 100%; padding: 10%; }
+
+div.changelog-header h2 {
+    color: var(--mainColorLightGreyText);
+    display: flex;
+    align-items: center;
+    gap: 0.66em;
+    margin-block: 0px;
+}
+
+div.quote {
+    display: inline-block;
+    max-width: 1000px;
+    padding: 2em 0em;
+    line-height: 1.4;
+    font-size: smaller;
+}
+
+div.main * > a {
+    color: var(--mainColorDesign);
+    text-decoration-style: dashed;
+}
+
+div.credits div {
+    padding: 0.33em 0em;
+    line-height: 1.4;
+    color: var(--mainColorLightGreyText);
+}
