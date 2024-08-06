@@ -1,6 +1,6 @@
 $(function() {
     const disclaimer = $(document.createElement("div"))
-    const ver = "2.0.3";
+    const ver = "2.0.4";
     const msg2 = "Website main search feature will not work!";
 
     disclaimer.addClass("disclaimer")

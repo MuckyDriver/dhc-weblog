@@ -3,18 +3,19 @@
 # Version 2.0.3 was successfully released to the public.
 ========================================================
 
-A new version (2.0.3) will include:
->   Preparation for projects.dhcweblogistics.net subdomain.
+A new version (2.0.4) will include:
+>   Continued preparation for projects.dhcweblogistics.net subdomain.
 >   bug fixes (issues)
+>   Small content update
 
 Suggestions from others:
 >   (none as of now...)
 
 Start Date (development):
->   14th July 2024 8:00 AM' 
+>   ? <Month> 2024 8:00 AM' 
 
-Likely Release Date (version 2.0.3):
->   21 July 2024 12:00 PM' (1 week development time).
+Likely Release Date (version 2.0.4):
+>   ? <Month> 2024 12:00 PM' (? week development time).
 
 # TODO LIST as followed...
 ==========================
