@@ -1,0 +1,4 @@
+96 px
+weight 500
+grade 0
+optical size 48

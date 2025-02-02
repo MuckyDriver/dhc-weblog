@@ -110,6 +110,10 @@ div.socials-container > a img {
     width: 24px;
 }
 
+div.socials-container > a img[alt="bsky"] {
+    padding: 2px;
+}
+
 @media (max-width: 600px) {
     div.socials-container {
         display: flex;

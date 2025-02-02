@@ -39,6 +39,11 @@
         { 
             "title": "TV Shows", "url": "https://pre.dhcweblogistics.net/tv-shows", "opt-in-class": "old",
             "keywords": ["tv", "show", "shows", "hobby", "hobbies", "other"]
+        },
+
+        { 
+            "title": "Projects", "url": "https://projects.dhcweblogistics.net",
+            "keywords": ["projects", "proj", "work", "portfolio", "experience", "development", "project", "develop", "developments", "creation", "creations"] 
         }
     ],
 

@@ -51,13 +51,18 @@ body > header {
 
 body > header > nav {
     border: 1px rgb(159, 175, 193, 0.33) solid;
-    padding: 1em 2em;
+    padding: 1em 1.5em;
     background-color: var(--mainColorDark);
     box-shadow: 0 0 1rem var(--mainColorLightDark);
     display: flex;
     gap: 1em;
     border-radius: var(--boxRoundnessFull);
     pointer-events: all;
+}
+
+body > header > nav.sub {
+    margin-left: 0.75em;
+    padding: 1em;
 }
 
 body > header > nav > a {
@@ -67,6 +72,18 @@ body > header > nav > a {
 
 body > header > nav > a img {
     width: 36px;
+}
+
+div.new-label {
+    position: absolute;
+    right: -1.25em;
+    top: -1.5em;
+    font-size: x-small;
+    background-color: var(--mainColorDesign);
+    color: black;
+    text-align: center;
+    padding: 0.2em 0.4em;
+    border-radius: var(--boxRoundnessFull);
 }
 
 /* Main > Nav */

@@ -94,6 +94,15 @@ div.main * > a {
     text-decoration-style: dashed;
 }
 
+div.main h4 > span {
+    padding: 3px 6px;
+    color: var(--mainColorLightGreyText);
+    display: inline-block;
+    background-color: var(--mainColorLightDark);
+    font-size: 80%;
+    margin-right: 0.5em;
+}
+
 div.credits div {
     padding: 0.33em 0em;
     line-height: 1.4;

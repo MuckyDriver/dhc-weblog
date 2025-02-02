@@ -1,0 +1,37 @@
+/* Input And Output For Commands */
+input#_i, input#output_i {
+    display: block;
+    box-sizing: border-box;
+    padding: 1em;
+    background-color: var(--mainColorDark);
+    margin: 0.5em 0em;
+    width: 100%;
+    color: var(--mainColorLightGreyText);
+    font-family: inherit;
+    border: 1px solid var(--mainColorLightDark);
+    border-radius: var(--boxRoundness3);
+}
+
+input#output_i { 
+    margin-top: 0em; 
+}
+
+#app_i {
+    display: grid;
+    grid-template-columns: auto max-content;
+    align-items: center;
+    gap: 0.5em;
+}
+
+#app_i button {
+    display: block;
+    padding: 1em;
+    border: none;
+    font-family: inherit;
+    background-color: var(--mainColorDesign);
+    border-radius: var(--boxRoundness3);
+    cursor: pointer;
+}
+
+input::placeholder { color: inherit; opacity: 0.6; }
+input::-ms-input-placeholder { color: inherit; opacity: 0.6; }

@@ -1,22 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <title>Developers' Den</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="https://pre.dhcweblogistics.net/css/styles.css">
-        <script defer src="https://pre.dhcweblogistics.net/js/countdown-epoch.js"></script>
+        <!-- Styling -->
+        <link rel="icon" href="img/icon.svg">
+        <link rel="stylesheet" href="styles/css/main.css">
+        <link rel="stylesheet" href="styles/css/popup.css">
+        <link rel="stylesheet" href="styles/css/test.css">
 
+        <!-- Scripts -->
+        <script defer src="https://pre.dhcweblogistics.net/js/countdown-epoch.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="scripts/js/popup.jquery.js"></script> 
+        <script defer src="scripts/js/test_script.js"></script>
     </head>
     <body>
-        <header><div class="wrapper">Test</div></header>
-        <div class="page dimmed">
-            <div class="content">
-                <p>New website coming soon in <span class="count-time" data-epoch="1729329600" data-duration="hour" data-suffix></span>.</p>
+        <!-- Popup: Help -->
+        <div class="popup closed" id="myHelp">
+            <div class="container">
+                <div class="head">
+                    <span class="title">Testing page explained</span>
+                    <button class="popupCloseButton tp-box"><img src="img/icon/000/close.svg" alt="close button"><span class="tooltip">Close</span></button>
+                </div>
+                <div class="body faded">
+                    <p>
+                        The testing page is where I will test upcoming features to the website, I will use this page for making sure
+                        something works correctly before release to the public. People may visit this webpage anytime to test out features within this 
+                        website. 
+                    </p>
+                    <h5>Command List</h5>
+                    <p>
+                        #refresh &bull; #refresh<br>
+                        #invert &bull; #invert==0<br>
+                        #brightness &bull; #brightness==2<br>
+                        #contrast &bull; #contrast==1.5<br>
+                        #hue &bull; #hue==0<br>
+                        #print &bull; #print==Hello World<br>
+                        #time &bull; #time<br>
+                        #date &bull; #date<br>
+                        #us_date &bull; #us_date<br>
+                        #rand &bull; #rand==64<br>
+                        #clear &bull; #clear<br>
+                        #domain &bull; #domain<br>
+                        #protocol &bull; #protocol<br>
+                        #port &bull; #port<br>
+                        #load_image &bull; #load_image==/img/svg/WorldMap.svg<br>
+                        #locale &bull; #locale<br>
+                        #timer &bull; #timer==30<br>
+                        #counter &bull; #counter==4<br>
+                        #speed &bull; #speed==10<br>
+                        #stop &bull; #stop
+                    </p>
+                </div>
             </div>
         </div>
 
-        <!-- Testing transition effect (this is the content)-->
-        <div class="sd_transition_effobj"></div>
+        <!-- Popup: Statistics -->
+        <div class="popup closed" id="myStats">
+            <div class="container">
+                <div class="head">
+                    <span class="title">Domain statistics</span>
+                    <button class="popupCloseButton tp-box"><img src="img/icon/000/close.svg" alt="close button"><span class="tooltip">Close</span></button>
+                </div>
+                <div class="body faded">
+                    <p><b>Number of pages</b> &bull; 10</p>
+                    <p><b>Script files</b> &bull; 9</p>
+                    <p><b>CSS files</b> &bull; 9</p>
+                    <p><b>Data files</b> &bull; 1</p>
+                    <p><b>Default font</b> &bull; Rubik</p>
+                    <p><b>Website file size</b> &bull; 3.59MB</p>
+                    <p><b>Total images file size</b> &bull; 2.95MB</p>
+                    <p><b>Domains and subdomains</b> &bull; dhcweblogistics.net, pre.dhcweblogistics.net, projects.dhcweblogistics.net</p>
+                    <p><b>Current Version</b> &bull; 2.0.5b</p>
+                    <p><b>Next Version</b> &bull; 2.0.6b</p>
+                    <p><b>Previous Version</b> &bull; 2.0.4b</p>
+                    <p><b>File types used</b> &bull; html, css, js, svg, json, png, txt, xml</p>
+                    <p><b>Built using</b> &bull; VSCode</p>
+                    <p><b>Deployed by</b> &bull; Cloudflare</p>
+                    <p><b>Website edition lifespan</b> &bull; <span class="count-time" data-epoch="1756681200" data-duration="day" data-suffix></span> left</p>
+                    <p><b>Created by</b> &bull; Claasgreeneye</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main -->
+        <main>
+            <div class="top">
+                <div class="logo">
+                    <img src="img/icon.svg" alt="logo icon svg">
+                    <span>DHC<br>TESTING<sup>&copy;</sup></span>
+                </div>
+
+                <div class="services">
+                    <div class="tp-box">
+                        <button data-find-id="myHelp" class="popupOpenButton"><img src="img/icon/fff/question.svg" alt="services" width="24"></button>
+                        <div class="tooltip right">Information</div>
+                    </div>
+                    <div class="tp-box">
+                        <button data-find-id="myStats" class="popupOpenButton"><img src="img/icon/fff/statistics.svg" alt="services" width="24"></button>
+                        <div class="tooltip">Statistics</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header section will include quick navigation which will stick to the top of the page after index page welcome banner. -->
+            <header>
+                <nav>
+                    <div>
+                        <a class="button-type-0 tp-box" href="index.html">
+                            <img src="img/icon/9fafc1/close.svg" alt="index">
+                            <span>Return to main website</span>
+                            <div class="tooltip left">Go Back</div>
+                        </a>
+                    </div>
+                </nav>
+            </header>
+        </main>
+
+        <!-- Quick Commands -->
+        <section>
+            <div class="wrapper">
+                <div>
+                    <label for="_i">Quick Command</label><br>
+                    <div id="app_i">
+                        <input name="_i" id="_i" placeholder="command box" type="text" autocomplete="off">
+                        <button>Run Command</button>
+                    </div>
+                    <input id="output_i" name="_i" type="text" readonly placeholder="output" autocomplete="off">
+                </div>
+                <img class="generatedImage" style="width: 100%; margin: 0.25em 0em; border-radius: 6px;" alt="generatedimage not found" src="/img/svg/WorldMap.svg">
+            </div>
+        </section>
     </body>
 </html>

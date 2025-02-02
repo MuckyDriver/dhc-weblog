@@ -2,6 +2,7 @@ $(() => {
     const mwpro_pages = $('#mwpro-pages');
     const mwpro_switch = $('#mwpro-page-switch');
 
+    // The Switcher
     mwpro_switch.children().each(function(i, obj) {
         const btn = $(obj);
 
@@ -16,13 +17,28 @@ $(() => {
             const page = $("#" + nav_id)
 
             if (page) {
+                let d = 250;
+
                 mwpro_pages.children().each((i, obj) => {
-                    $(obj).fadeOut(250)
+                    setTimeout(() => {
+                        $(obj).fadeToggle(d)
+                    }, (d-50)*i)
                 })
 
                 btn.addClass("active")
-                page.fadeIn(250)
             }
         })
     })
+
+    // Number of Shows/Movie counter
+    let tvShowCounter = $("div.mwpro-page-switch :first-child span.num")
+    let movieCounter = $("div.mwpro-page-switch :last-child span.num")
+
+    tvShowCounter.text(
+        $("#mwpro-tv-shows div.list > span").length
+    )
+
+    movieCounter.text(
+        $("#mwpro-movies div.list > span").length
+    )
 })

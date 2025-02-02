@@ -84,6 +84,7 @@ $(() => {
 
         // Input/Button Handling
         searchButton.on("click", keywordSearch)
+    
         searchInput.on("keydown", (e) => {
             if (e.key == "Enter") {
                 keywordSearch()
