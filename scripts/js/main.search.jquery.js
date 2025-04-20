@@ -90,6 +90,35 @@ $(() => {
                 keywordSearch()
             }
         })
+
+        // Auto Suggestor
+        let searchSuggest = $(document.createElement("div"))
+
+        searchSuggest.addClass("search-suggest")
+        searchSuggest.appendTo($(".searcher"))
+        
+        searchInput.on("keyup", (e) => {
+            if (e.key != "Enter") {
+                let stringInput = searchInput.val().toLowerCase()
+
+                if (stringInput != "") {
+
+                    $.each(searchData, (i, obj) => {
+                        let title = obj.title
+
+                        if (title.toLowerCase().startsWith(stringInput)) {
+                            searchInput.css("padding", "0.5em 1em 1.5em 1em")
+                            searchSuggest.text("∴ " + title)
+                        }
+                        
+                    })
+                } else {
+                    searchSuggest.text("")
+                    searchInput.css("padding", "1em")
+                }
+
+            }
+        })
     })
 
     // Button Effects
